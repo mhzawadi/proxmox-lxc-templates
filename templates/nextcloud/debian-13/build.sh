@@ -95,9 +95,12 @@ mv "/tmp/files/pool.conf" /etc/php/8.3/fpm/pool.d/www.conf
 mv "/tmp/files/php.ini" /etc/php/8.3/fpm/php.ini
 
 # === Copy nginz config into place ===
+mkdir /etc/nginx/sites-available
+mkdir /etc/nginx/sites-enabled
 mv "/tmp/files/nginx.conf" /etc/nginx/nginx.conf
 mv "/tmp/files/nginx_nextcloud.conf" /etc/nginx/sites-available/default.conf
 mv "/tmp/files/upstream.conf" /etc/nginx/conf.d/upstream.conf
+ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # == Download and unpack nextcloud ===
 mkdir /var/www/
