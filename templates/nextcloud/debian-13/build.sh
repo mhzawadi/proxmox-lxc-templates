@@ -8,7 +8,8 @@ export DEBIAN_FRONTEND=noninteractive
 # === Install dependencies ===
 apt-get update
 apt-get install -y --no-install-recommends \
-	curl gnupg2 ca-certificates lsb-release debian-archive-keyring
+  curl gnupg2 ca-certificates lsb-release debian-archive-keyring \
+  unzip
 
 # === Create nextcloud user/group with fixed IDs (for shared volumes) ===
 if [[ -n "${TEMPLATE_GID:-}" ]]; then
@@ -106,7 +107,7 @@ ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.c
 mkdir /var/www/
 mkdir /var/lib/nextcloud
 wget https://download.nextcloud.com/server/releases/nextcloud-32.0.6.zip
-unzip nextcloud-v32.0.6.zip
+unzip nextcloud-32.0.6.zip
 mv nextcloud /var/www/html
 chown nextcloud:nextcloud /var/www/html -R
 
