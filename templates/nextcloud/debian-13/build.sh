@@ -86,7 +86,7 @@ apt-get install -y --no-install-recommends \
   mariadb-client
 
 # === Install pecl libarys ===
-pecl install mcrypt imagick
+# pecl install mcrypt imagick
 
 # === Copy PHP config into place ===
 mv "$ROOTFS/tmp/files/opcache.ini" /etc/php/8.3/mods-available/opcache.ini
