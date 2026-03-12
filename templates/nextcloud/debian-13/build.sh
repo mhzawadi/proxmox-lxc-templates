@@ -89,15 +89,23 @@ apt-get install -y --no-install-recommends \
 # pecl install mcrypt imagick
 
 # === Copy PHP config into place ===
-mv "$ROOTFS/tmp/files/opcache.ini" /etc/php/8.3/mods-available/opcache.ini
-mv "$ROOTFS/tmp/files/php-fpm.conf" /etc/php/8.3/fpm/php-fpm.conf
-mv "$ROOTFS/tmp/files/pool.conf" /etc/php/8.3/fpm/pool.d/www.conf
-mv "$ROOTFS/tmp/files/php.ini" /etc/php/8.3/fpm/php.ini
+mv "/tmp/files/opcache.ini" /etc/php/8.3/mods-available/opcache.ini
+mv "/tmp/files/php-fpm.conf" /etc/php/8.3/fpm/php-fpm.conf
+mv "/tmp/files/pool.conf" /etc/php/8.3/fpm/pool.d/www.conf
+mv "/tmp/files/php.ini" /etc/php/8.3/fpm/php.ini
 
 # === Copy nginz config into place ===
-mv "$ROOTFS/tmp/files/nginx.conf" /etc/nginx/nginx.conf
-mv "$ROOTFS/tmp/files/nginx_nextcloud.conf" /etc/nginx/sites-available/default.conf
-mv "$ROOTFS/tmp/files/upstream.conf" /etc/nginx/conf.d/upstream.conf
+mv "/tmp/files/nginx.conf" /etc/nginx/nginx.conf
+mv "/tmp/files/nginx_nextcloud.conf" /etc/nginx/sites-available/default.conf
+mv "/tmp/files/upstream.conf" /etc/nginx/conf.d/upstream.conf
+
+# == Download and unpack nextcloud ===
+mkdir /var/www/
+mkdir /var/lib/nextcloud
+wget https://download.nextcloud.com/server/releases/nextcloud-v32.0.6.zip
+unzip nextcloud-v32.0.6.zip
+mv nextcloud /var/www/html
+chown www-data:www-data /var/www/html -R
 
 # === Make sure nginx and PHP auto start ===
 /usr/bin/systemctl enable nginx php8.3-fpm
