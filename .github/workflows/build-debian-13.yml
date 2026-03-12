@@ -229,6 +229,7 @@ jobs:
 
           if [[ -d "templates/${{ matrix.template }}/debian-13/files" ]]; then
             echo "Need files please"
+            ls -l "templates/${{ matrix.template }}/debian-13/files"
             sudo cp -r "templates/${{ matrix.template }}/debian-13/files" "$ROOTFS/tmp/files"
           fi
 
