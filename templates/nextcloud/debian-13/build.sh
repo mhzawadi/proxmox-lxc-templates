@@ -12,11 +12,11 @@ apt-get install -y --no-install-recommends \
 
 # === Create nextcloud user/group with fixed IDs (for shared volumes) ===
 if [[ -n "${TEMPLATE_GID:-}" ]]; then
-	groupadd -g "$TEMPLATE_GID" jellyfin
+  groupadd -g "$TEMPLATE_GID" nextcloud
 fi
 if [[ -n "${TEMPLATE_UID:-}" ]]; then
-	useradd -r -u "$TEMPLATE_UID" -g "${TEMPLATE_GID:-jellyfin}" \
-		-s /usr/sbin/nologin -d /var/lib/jellyfin jellyfin
+	useradd -r -u "$TEMPLATE_UID" -g "${TEMPLATE_GID:-nextcloud}" \
+		-s /usr/sbin/nologin -d /var/lib/nextcloud nextcloud
 fi
 
 # === Add nginx and PHP repository ===
@@ -105,10 +105,10 @@ ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.c
 # == Download and unpack nextcloud ===
 mkdir /var/www/
 mkdir /var/lib/nextcloud
-wget https://download.nextcloud.com/server/releases/nextcloud-v32.0.6.zip
+wget https://download.nextcloud.com/server/releases/nextcloud-32.0.6.zip
 unzip nextcloud-v32.0.6.zip
 mv nextcloud /var/www/html
-chown www-data:www-data /var/www/html -R
+chown nextcloud:nextcloud /var/www/html -R
 
 # === Make sure nginx and PHP auto start ===
 /usr/bin/systemctl enable nginx php8.3-fpm

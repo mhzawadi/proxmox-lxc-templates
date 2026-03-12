@@ -10,7 +10,8 @@ maintainer: mhzawadi <81692934+Deroy2112@users.noreply.github.com>
 project_url: https://nextcloud.org
 
 user:
-  gid: 1200
+  uid: 1101
+  gid: 1100
 
 resources:
   memory_min: 512
