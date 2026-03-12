@@ -1,96 +1,106 @@
 #!/bin/bash
-# templates/nginx/build.sh
+# templates/jellyfin/build.sh
 # Runs inside systemd-nspawn chroot during GitHub Actions build
 set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 
-# === Install packages ===
+# === Install dependencies ===
 apt-get update
 apt-get install -y --no-install-recommends \
-	nginx \
-	curl \
-	ca-certificates
+	curl gnupg2 ca-certificates lsb-release debian-archive-keyring
 
-# === Create shared group for volumes (if configured) ===
+# === Create nextcloud user/group with fixed IDs (for shared volumes) ===
 if [[ -n "${TEMPLATE_GID:-}" ]]; then
-	groupadd -g "$TEMPLATE_GID" shared
-	usermod -aG shared www-data
+	groupadd -g "$TEMPLATE_GID" jellyfin
+fi
+if [[ -n "${TEMPLATE_UID:-}" ]]; then
+	useradd -r -u "$TEMPLATE_UID" -g "${TEMPLATE_GID:-jellyfin}" \
+		-s /usr/sbin/nologin -d /var/lib/jellyfin jellyfin
 fi
 
-# === Configure nginx ===
-cat >/etc/nginx/sites-available/default <<'EOF'
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
+# === Add nginx and PHP repository ===
+mkdir -p /etc/apt/keyrings
+curl -fsSL https://packages.sury.org/nginx/apt.gpg |
+	gpg --dearmor -o /etc/apt/keyrings/php.gpg
+chmod 644 /etc/apt/keyrings/php.gpg
 
-    root /var/www/html;
-    index index.html index.htm;
+curl -fsSL https://nginx.org/keys/nginx_signing.key \
+-o /etc/apt/keyrings/nginx.asc
+chmod 644 /etc/apt/keyrings/nginx.asc
 
-    server_name _;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-}
+cat >/etc/apt/sources.list.d/nginx.sources <<'EOF'
+Components: nginx
+Enabled: yes
+X-Repolib-Name: nginx
+Signed-By: /etc/apt/keyrings/nginx.asc
+Suites: trixie
+Types: deb
+URIs: http://nginx.org/packages/debian
 EOF
 
-# === Welcome page ===
-cat >/var/www/html/index.html <<'EOF'
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LXC Template - Nginx</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 { color: #333; margin-bottom: 20px; }
-        code {
-            background: #e8e8e8;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
-        .info { color: #666; margin-top: 30px; }
-        a { color: #0066cc; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Nginx is running!</h1>
-        <p>This container was created from an LXC template.</p>
-        <p>Template version: <code>__VERSION__</code></p>
-        <div class="info">
-            <p>Useful commands:</p>
-            <ul>
-                <li><code>template-update status</code> - Check for updates</li>
-                <li><code>template-update update</code> - Apply updates</li>
-                <li><code>systemctl status nginx</code> - Check nginx status</li>
-            </ul>
-            <p>
-                <a href="https://github.com/Deroy2112/proxmox-lxc-templates">Template Repository</a>
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+cat >/etc/apt/sources.list.d/php.sources <<'EOF'
+Components: main
+Enabled: yes
+X-Repolib-Name: php
+Signed-By: /etc/apt/keyrings/php.gpg
+Suites: trixie
+Types: deb
+URIs: https://packages.sury.org/php/
 EOF
 
-# Insert version into HTML
-sed -i "s/__VERSION__/${TEMPLATE_VERSION}/" /var/www/html/index.html
+# === Install nginx and PHP ===
+apt-get update
+apt-get install -y --no-install-recommends \
+  nginx \
+  php8.3-apcu \
+  php8.3-bcmath \
+  php8.3-bz2 \
+  php8.3-cli \
+  php8.3-common \
+  php8.3-curl \
+  php8.3-dev \
+  php8.3-fpm \
+  php8.3-gd \
+  php8.3-gmp \
+  php8.3-igbinary \
+  php8.3-imap \
+  php8.3-intl \
+  php8.3-mbstring \
+  php8.3-mbstring-dbgsym \
+  php8.3-memcached \
+  php8.3-msgpack \
+  php8.3-mysql \
+  php8.3-opcache \
+  php8.3-readline \
+  php8.3-redis \
+  php8.3-sqlite3 \
+  php8.3-xml \
+  php8.3-xmlrpc \
+  php8.3-zip \
+  php8.3-imagick \
+  php-pear \
+  pkg-php-tools \
+  libmagickwand-dev \
+  ffmpeg \
+  mariadb-client
+
+# === Install pecl libarys ===
+pecl install mcrypt imagick
+
+# === Copy PHP config into place ===
+mv "$ROOTFS/tmp/files/opcache.ini" /etc/php/8.3/mods-available/opcache.ini
+mv "$ROOTFS/tmp/files/php-fpm.conf" /etc/php/8.3/fpm/php-fpm.conf
+mv "$ROOTFS/tmp/files/pool.conf" /etc/php/8.3/fpm/pool.d/www.conf
+mv "$ROOTFS/tmp/files/php.ini" /etc/php/8.3/fpm/php.ini
+
+# === Copy nginz config into place ===
+mv "$ROOTFS/tmp/files/nginx.conf" /etc/nginx/nginx.conf
+mv "$ROOTFS/tmp/files/nginx_nextcloud.conf" /etc/nginx/sites-available/default.conf
+mv "$ROOTFS/tmp/files/upstream.conf" /etc/nginx/conf.d/upstream.conf
+
+# === Make sure nginx and PHP auto start ===
+/usr/bin/systemctl enable nginx php8.3-fpm
 
 # === Template info ===
 cat >/etc/template-info <<EOF
@@ -107,7 +117,7 @@ curl -fsSL "${repo_raw_url}/scripts/template-update.sh" \
 chmod +x /usr/local/bin/template-update
 
 # === Enable services ===
-systemctl enable nginx
+systemctl enable jellyfin
 
 # === Cleanup ===
 apt-get clean
