@@ -109,7 +109,9 @@ mkdir /var/lib/nextcloud
 wget https://download.nextcloud.com/server/releases/nextcloud-32.0.6.zip
 unzip nextcloud-32.0.6.zip
 mv nextcloud /var/www/html
+mv /tmp/files/nextcloud_config.php /var/www/html/config/config.php
 chown nextcloud:nextcloud /var/www/html -R
+chown nextcloud:nextcloud /var/lib/nextcloud -R
 
 # === Template info ===
 cat >/etc/template-info <<EOF
