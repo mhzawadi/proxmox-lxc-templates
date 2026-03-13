@@ -237,7 +237,11 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/vv32.0.6-1-nextcloud/deroy2112-debian-13-nextcloud_v32.0.6-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/vv32.0.6-1-nextcloud",
+  "sha512": "954bc67979d23111370856ad00698cc4ca645b24cd5adf3d26e1044505b6c86b5ecf266cd4cf57b935edfbc6d163e545765622f337bcfe1829b22b152cac0e3a",
+  "release_date": "2026-03-13T06:34:40Z"
 }
 ,
 {
