@@ -82,7 +82,7 @@ jobs:
           USER_GID=$(yq -r '.user.gid // ""' "$CONFIG")
 
           FULL_VERSION="${VERSION}-${BUILD_VERSION}"
-          TEMPLATE_FILE="deroy2112-${BASE_OS}-${NAME}_${FULL_VERSION}_${ARCH}.tar.zst"
+          TEMPLATE_FILE="${{ github.repository_owner }}-${BASE_OS}-${NAME}_${FULL_VERSION}_${ARCH}.tar.zst"
 
           echo "name=$NAME" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
