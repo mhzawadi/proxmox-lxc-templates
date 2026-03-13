@@ -1,0 +1,11 @@
+[Unit]
+Description=Setup nextcloud trusted domains
+After=network.service
+
+[Service]
+Type=oneshot
+ExecStart=sed -i  "s/##HOSTIP##/`hostname -I | awk '{print $1}'`/" /var/www/html/config/config.php
+ExecStartPost=/bin/systemctl disable nextcloud_ip
+
+[Install]
+WantedBy=multi-user.target

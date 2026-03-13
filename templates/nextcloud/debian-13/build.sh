@@ -112,6 +112,7 @@ mv nextcloud /var/www/html
 mv /tmp/files/nextcloud_config.php /var/www/html/config/config.php
 chown nextcloud:nextcloud /var/www/html -R
 chown nextcloud:nextcloud /var/lib/nextcloud -R
+cp /tmp/files/nextcloud_ip.service /etc/systemd/system/nextcloud_ip.service
 
 # === Template info ===
 cat >/etc/template-info <<EOF
@@ -128,7 +129,7 @@ curl -fsSL "${repo_raw_url}/scripts/template-update.sh" \
 chmod +x /usr/local/bin/template-update
 
 # === Enable services ===
-/usr/bin/systemctl enable nginx php8.3-fpm
+/usr/bin/systemctl enable nginx php8.3-fpm nextcloud_ip
 
 # === Cleanup ===
 apt-get clean
