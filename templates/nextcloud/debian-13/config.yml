@@ -3,7 +3,7 @@ description: Nextcloud on Debian 13 (Trixie)
 category: network
 icon: nextcloud
 version: 32.0.6
-build_version: 4
+build_version: 1
 base_os: debian-13
 architecture: amd64
 maintainer: mhzawadi <mhzawadi@users.noreply.github.com>
