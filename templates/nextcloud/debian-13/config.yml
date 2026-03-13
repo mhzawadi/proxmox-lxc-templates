@@ -1,0 +1,49 @@
+name: nextcloud
+description: Nextcloud on Debian 13 (Trixie)
+category: network
+icon: nextcloud
+version: v32.0.6
+build_version: 1
+base_os: debian-13
+architecture: amd64
+maintainer: mhzawadi <81692934+Deroy2112@users.noreply.github.com>
+project_url: https://nextcloud.org
+
+user:
+  uid: 1101
+  gid: 1100
+
+resources:
+  memory_min: 512
+  memory_recommended: 1024
+  disk_min: 10G
+  disk_recommended: 16G
+  cores: 1
+
+ports:
+  - port: 80
+    description: HTTP
+
+paths:
+  - path: /var/lib/nextcloud
+    description: nextcloud data
+
+quick_start: |
+  Web Server: http://<IP>
+  Config: /etc/nginx/nginx.conf
+  Test: nginx -t
+  Reload: systemctl reload nginx
+
+faq:
+  - question: How do I add a new virtual host?
+    answer: |
+      Create a config file in /etc/nginx/sites-available/,
+      then symlink it to /etc/nginx/sites-enabled/ and reload nginx.
+  - question: How do I enable SSL with Let's Encrypt?
+    answer: |
+      Install certbot: apt install certbot python3-certbot-nginx
+      Then run: certbot --nginx
+  - question: How do I check for configuration errors?
+    answer: |
+      Run: nginx -t
+      This validates the configuration before reloading.
