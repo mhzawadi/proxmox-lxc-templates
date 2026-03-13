@@ -111,9 +111,6 @@ unzip nextcloud-32.0.6.zip
 mv nextcloud /var/www/html
 chown nextcloud:nextcloud /var/www/html -R
 
-# === Make sure nginx and PHP auto start ===
-/usr/bin/systemctl enable nginx php8.3-fpm
-
 # === Template info ===
 cat >/etc/template-info <<EOF
 TEMPLATE_NAME="${TEMPLATE_NAME}"
@@ -129,7 +126,7 @@ curl -fsSL "${repo_raw_url}/scripts/template-update.sh" \
 chmod +x /usr/local/bin/template-update
 
 # === Enable services ===
-systemctl enable jellyfin
+/usr/bin/systemctl enable nginx php8.3-fpm
 
 # === Cleanup ===
 apt-get clean
