@@ -7,15 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.26.0-1] - 2025-01-15
+## [32.0.6-1] - 2026-05-12
 
 ### Added
 
 - Initial release
-- Nginx 1.26.x from Debian 13 (Trixie) repositories
-- Default welcome page with template info
-- template-update tool for in-container updates
-- Automatic service enablement
 
-[Unreleased]: https://github.com/deroy2112/proxmox-lxc-templates/compare/v1.26.0-1-nginx...HEAD
-[1.26.0-1]: https://github.com/deroy2112/proxmox-lxc-templates/releases/tag/v1.26.0-1-nginx
+## [32.0.6-2] - 2026-05-13
+
+### Added
+
+- doc: update

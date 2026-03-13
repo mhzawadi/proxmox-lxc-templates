@@ -2,11 +2,11 @@ name: nextcloud
 description: Nextcloud on Debian 13 (Trixie)
 category: network
 icon: nextcloud
-version: v32.0.6
-build_version: 1
+version: 32.0.6
+build_version: 2
 base_os: debian-13
 architecture: amd64
-maintainer: mhzawadi <81692934+Deroy2112@users.noreply.github.com>
+maintainer: mhzawadi <mhzawadi@users.noreply.github.com>
 project_url: https://nextcloud.org
 
 user:
@@ -30,20 +30,9 @@ paths:
 
 quick_start: |
   Web Server: http://<IP>
-  Config: /etc/nginx/nginx.conf
-  Test: nginx -t
-  Reload: systemctl reload nginx
+  Data: /var/lib/nextcloud
 
 faq:
-  - question: How do I add a new virtual host?
+  - question: Where is my data?
     answer: |
-      Create a config file in /etc/nginx/sites-available/,
-      then symlink it to /etc/nginx/sites-enabled/ and reload nginx.
-  - question: How do I enable SSL with Let's Encrypt?
-    answer: |
-      Install certbot: apt install certbot python3-certbot-nginx
-      Then run: certbot --nginx
-  - question: How do I check for configuration errors?
-    answer: |
-      Run: nginx -t
-      This validates the configuration before reloading.
+      All the user data is stored in `/var/lib/nextcloud`
