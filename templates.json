@@ -195,7 +195,7 @@
   "category": "network",
   "icon": "nextcloud",
   "version": "32.0.6",
-  "build_version": 2,
+  "build_version": 3,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "mhzawadi <mhzawadi@users.noreply.github.com>",
@@ -229,11 +229,7 @@
       "question": "Where is my data?",
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-2-nextcloud/deroy2112-debian-13-nextcloud_32.0.6-2_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-2-nextcloud",
-  "sha512": "0e83a10bdec5293d707efb0de6b4a334751e060a81b4a882c93af76274eb75bf4f72d05cf65a012e0bd0febf9e3946c0fa7a06a54bb3303168a3ed9de775d1da",
-  "release_date": "2026-03-13T06:55:56Z"
+  ]
 }
 ,
 {
