@@ -3,7 +3,7 @@ description: Nextcloud on Debian 13 (Trixie)
 category: network
 icon: nextcloud
 version: 32.0.6
-build_version: 3
+build_version: 4
 base_os: debian-13
 architecture: amd64
 maintainer: mhzawadi <mhzawadi@users.noreply.github.com>
@@ -14,11 +14,11 @@ user:
   gid: 1100
 
 resources:
-  memory_min: 512
-  memory_recommended: 1024
+  memory_min: 1024
+  memory_recommended: 4096
   disk_min: 10G
   disk_recommended: 16G
-  cores: 1
+  cores: 2
 
 ports:
   - port: 80

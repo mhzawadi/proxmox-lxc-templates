@@ -6,10 +6,7 @@ $CONFIG = array (
   'passwordsalt' => '',
   'secret' => '',
   'trusted_domains' => [
-    'demo.example.org',
-    'otherdomain.example.org',
-    '10.111.112.113',
-    '[2001:db8::1]'
+    '##HOSTIP##'
   ],
   'datadirectory' => '/var/lib/nextcloud/',
   'dbtype' => 'sqlite3',
