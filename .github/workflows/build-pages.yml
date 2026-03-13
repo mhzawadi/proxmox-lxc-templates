@@ -70,7 +70,7 @@ jobs:
 
             FULL_VERSION="${VERSION}-${BUILD_VERSION}"
             TAG="v${FULL_VERSION}-${NAME}"
-            FILENAME="${{ github.repository_owner }}-${BASE_OS}-${NAME}_${FULL_VERSION}_${ARCH}.tar.zst"
+            FILENAME="deroy2112-${BASE_OS}-${NAME}_${FULL_VERSION}_${ARCH}.tar.zst"
 
             # Get release info from GitHub
             SHA512=""
