@@ -113,6 +113,7 @@ mv /tmp/files/nextcloud_config.php /var/www/html/config/config.php
 chown nextcloud:nextcloud /var/www/html -R
 chown nextcloud:nextcloud /var/lib/nextcloud -R
 cp /tmp/files/nextcloud_ip.service /etc/systemd/system/nextcloud_ip.service
+cp /tmp/files/nextcloud_ip.sh /usr/local/bin/nextcloud_ip.sh
 
 # === Template info ===
 cat >/etc/template-info <<EOF
