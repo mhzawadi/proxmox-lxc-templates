@@ -230,9 +230,9 @@
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
   ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-2-nextcloud/mhzawadi-debian-13-nextcloud_32.0.6-2_amd64.tar.zst",
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-2-nextcloud/deroy2112-debian-13-nextcloud_32.0.6-2_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-2-nextcloud",
-  "sha512": "177f0f6d069f521a1b9a74e443b4f9104fb4a2acf4f337127d5354192d19f070563d2912c612a33fd22c5224e916e00fe445fa4640b319a1f91fc9371fe86187",
+  "sha512": "7df56b642a5dc886afd76b3e70bce4571ce70fc4d07561fb5c761a423fbcea314a996b3c534257d7f6842a4df3e5c448bdba9413a0841407db798893a7d00abc",
   "release_date": "2026-03-13T06:55:56Z"
 }
 ,
