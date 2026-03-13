@@ -232,7 +232,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-2-nextcloud/deroy2112-debian-13-nextcloud_32.0.6-2_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-2-nextcloud",
-  "sha512": "7df56b642a5dc886afd76b3e70bce4571ce70fc4d07561fb5c761a423fbcea314a996b3c534257d7f6842a4df3e5c448bdba9413a0841407db798893a7d00abc",
+  "sha512": "0e83a10bdec5293d707efb0de6b4a334751e060a81b4a882c93af76274eb75bf4f72d05cf65a012e0bd0febf9e3946c0fa7a06a54bb3303168a3ed9de775d1da",
   "release_date": "2026-03-13T06:55:56Z"
 }
 ,
