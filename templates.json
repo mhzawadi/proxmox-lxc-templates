@@ -229,7 +229,11 @@
       "question": "Where is my data?",
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-1-nextcloud/deroy2112-debian-13-nextcloud_32.0.6-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-1-nextcloud",
+  "sha512": "96aee9a1e9e60d253b0c37817b9c4069c0893042cc52fabac188db1ac2be417cc87cff8e03edab68daf2e2a86dd1280ec9dfdda6055373748e4c9037ec969911",
+  "release_date": "2026-03-13T20:17:11Z"
 }
 ,
 {
