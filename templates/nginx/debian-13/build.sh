@@ -8,9 +8,26 @@ export DEBIAN_FRONTEND=noninteractive
 # === Install packages ===
 apt-get update
 apt-get install -y --no-install-recommends \
-	nginx \
-	curl \
-	ca-certificates
+	curl gnupg2 ca-certificates lsb-release debian-archive-keyring
+
+# === Add nginx and PHP repository ===
+curl -fsSL https://nginx.org/keys/nginx_signing.key \
+-o /etc/apt/keyrings/nginx.asc
+chmod 644 /etc/apt/keyrings/nginx.asc
+
+cat >/etc/apt/sources.list.d/nginx.sources <<'EOF'
+Components: nginx
+Enabled: yes
+X-Repolib-Name: nginx
+Signed-By: /etc/apt/keyrings/nginx.asc
+Suites: trixie
+Types: deb
+URIs: http://nginx.org/packages/debian
+EOF
+
+apt-get update
+apt-get install -y --no-install-recommends \
+nginx
 
 # === Create shared group for volumes (if configured) ===
 if [[ -n "${TEMPLATE_GID:-}" ]]; then
