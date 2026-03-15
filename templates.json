@@ -195,7 +195,7 @@
   "category": "network",
   "icon": "nextcloud",
   "version": "32.0.6",
-  "build_version": 3,
+  "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "mhzawadi <mhzawadi@users.noreply.github.com>",
@@ -229,11 +229,7 @@
       "question": "Where is my data?",
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-3-nextcloud/deroy2112-debian-13-nextcloud_32.0.6-3_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-3-nextcloud",
-  "sha512": "2c38645911d129ecfff3fcdebaab38ae475ba86bafc9a9548830eac8bb509106706f44788770728f77adee06954f232acfb484b5f066e5a2aed69bea5f5b3125",
-  "release_date": "2026-03-15T13:49:56Z"
+  ]
 }
 ,
 {
@@ -373,11 +369,7 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.2-1-nginx/deroy2112-debian-13-nginx_1.28.2-1_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.28.2-1-nginx",
-  "sha512": "ad3da7c3115b284bb3ad8b95e785a501edb4b235e01015d4ace7cd269e06e9be4dbcb7ff184515b2ed0775baea4613779f695b0344a7ba3f06cc2b39a5eda518",
-  "release_date": "2026-03-15T13:54:57Z"
+  ]
 }
 ,
 {
