@@ -36,6 +36,8 @@ if [[ -n "${TEMPLATE_GID:-}" ]]; then
 fi
 
 # === Configure nginx ===
+mkdir /etc/nginx/sites-available
+mkdir /etc/nginx/sites-enabled
 cat >/etc/nginx/sites-available/default <<'EOF'
 server {
     listen 80 default_server;
@@ -51,6 +53,7 @@ server {
     }
 }
 EOF
+ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # === Welcome page ===
 cat >/var/www/html/index.html <<'EOF'
