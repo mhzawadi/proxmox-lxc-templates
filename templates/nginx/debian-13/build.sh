@@ -56,7 +56,7 @@ EOF
 ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 
 # === Welcome page ===
-mkdir /var/www/html/
+mkdir -p /var/www/html/
 cat >/var/www/html/index.html <<'EOF'
 <!DOCTYPE html>
 <html lang="en">
