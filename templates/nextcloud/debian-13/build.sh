@@ -16,8 +16,8 @@ if [[ -n "${TEMPLATE_GID:-}" ]]; then
   groupadd -g "$TEMPLATE_GID" nextcloud
 fi
 if [[ -n "${TEMPLATE_UID:-}" ]]; then
-	useradd -r -u "$TEMPLATE_UID" -g "${TEMPLATE_GID:-nextcloud}" \
-		-s /usr/sbin/nologin -d /var/lib/nextcloud nextcloud
+  useradd -r -u "$TEMPLATE_UID" -g "${TEMPLATE_GID:-nextcloud}" \
+    -s /usr/sbin/nologin -d /var/lib/nextcloud nextcloud
 fi
 
 # === Add nginx and PHP repository ===
@@ -27,7 +27,7 @@ curl -fsSL https://packages.sury.org/nginx/apt.gpg |
 chmod 644 /etc/apt/keyrings/php.gpg
 
 curl -fsSL https://nginx.org/keys/nginx_signing.key \
--o /etc/apt/keyrings/nginx.asc
+  -o /etc/apt/keyrings/nginx.asc
 chmod 644 /etc/apt/keyrings/nginx.asc
 
 cat >/etc/apt/sources.list.d/nginx.sources <<'EOF'
@@ -101,8 +101,11 @@ mv "/tmp/files/opcache.ini" /etc/php/8.3/mods-available/opcache.ini
 mv "/tmp/files/php-fpm.conf" /etc/php/8.3/fpm/php-fpm.conf
 mv "/tmp/files/pool.conf" /etc/php/8.3/fpm/pool.d/www.conf
 mv "/tmp/files/php.ini" /etc/php/8.3/fpm/php.ini
+touch /var/log/php-fpm.log
+touch /var/log/fpm-php.www.log
+chown nextcloud:nextcloud /var/log/php-fpm.log /var/log/fpm-php.www.log
 
-# === Copy nginz config into place ===
+# === Copy nginx config into place ===
 mkdir /etc/nginx/sites-available
 mkdir /etc/nginx/sites-enabled
 mv "/tmp/files/nginx.conf" /etc/nginx/nginx.conf
