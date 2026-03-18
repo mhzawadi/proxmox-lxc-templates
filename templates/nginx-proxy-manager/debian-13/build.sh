@@ -50,7 +50,7 @@ Signed-By: /etc/apt/keyrings/nodesource.gpg
 EOF
 
 # === Add OpenResty repository (using bookworm - compatible with trixie) ===
-curl -fsSL https://openresty.org/package/pubkey2.gpg |
+curl -fsSL https://openresty.org/package/pubkey.gpg |
 	gpg --dearmor -o /etc/apt/keyrings/openresty.gpg
 chmod 644 /etc/apt/keyrings/openresty.gpg
 
