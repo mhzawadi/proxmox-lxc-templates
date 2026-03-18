@@ -9,4 +9,7 @@ $CONFIG = array (
   'datadirectory' => '/var/lib/nextcloud/',
   'dbtype' => 'sqlite3',
   'dbtableprefix' => 'oc_',
+  'htaccess.IgnoreFrontController' => true,
+  'htaccess.RewriteBase' => '/',
+  'loglevel' => 2,
 );
