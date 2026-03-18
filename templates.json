@@ -320,7 +320,7 @@
   "category": "network",
   "icon": "nginx",
   "version": "1.28.2",
-  "build_version": 1,
+  "build_version": 2,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "Deroy2112 <81692934+Deroy2112@users.noreply.github.com>",
