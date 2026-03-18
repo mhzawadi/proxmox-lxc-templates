@@ -12,4 +12,5 @@ $CONFIG = array (
   'htaccess.IgnoreFrontController' => true,
   'htaccess.RewriteBase' => '/',
   'loglevel' => 2,
+  'overwriteprotocol' => 'http',
 );
