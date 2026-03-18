@@ -373,7 +373,11 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.2-2-nginx/deroy2112-debian-13-nginx_1.28.2-2_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.28.2-2-nginx",
+  "sha512": "97bd3fef90b9956370e741b0a9187df698f616044789ef07beac6544996dc57654bbe66eb551c34b43bebcdb820bef12c93069082fb33ee73afcc7a630560e6e",
+  "release_date": "2026-03-18T12:29:09Z"
 }
 ,
 {
