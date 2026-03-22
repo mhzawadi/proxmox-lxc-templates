@@ -1,4 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
 
 /**
  * Templates Collection
@@ -6,7 +8,7 @@ import { defineCollection, z } from "astro:content";
  * Generated from templates config.yml files during CI build.
  */
 const templates = defineCollection({
-  type: "data",
+  loader: glob({ pattern: '**/[^_]*.{yml,yaml}', base: "./src/content/templates/" }),
   schema: z.object({
     // Basic Info
     name: z.string(),
@@ -91,7 +93,6 @@ const templates = defineCollection({
  * Markdown files for documentation pages
  */
 const docs = defineCollection({
-  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
