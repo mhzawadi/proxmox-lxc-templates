@@ -186,7 +186,11 @@
       "question": "How do I access Jellyfin remotely?",
       "answer": "Set up a reverse proxy (e.g., nginx) with SSL,\nor use Jellyfin's built-in HTTPS on port 8920.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.6-1-jellyfin/deroy2112-debian-13-jellyfin_10.11.6-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.11.6-1-jellyfin",
+  "sha512": "9fe20d76ade96878127e4b30c2a8e52b826a95f0345d69dab1d6347a23698176929525245ba9b1fe5e9871e2d67849ce1032d51bdbb66482f272e761f6be80f2",
+  "release_date": "2026-03-22T09:19:05Z"
 }
 ,
 {
@@ -504,6 +508,10 @@
       "question": "How do I disable new user registration?",
       "answer": "Add to /etc/vaultwarden/vaultwarden.env:\n  SIGNUPS_ALLOWED=false\nRestart: systemctl restart vaultwarden\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.35.4-1-vaultwarden/deroy2112-debian-13-vaultwarden_1.35.4-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.35.4-1-vaultwarden",
+  "sha512": "21e2f07493bf3ad7d96a1103542d0f7a175be08cfcf2a165d1d657a399f88a2dd21c03d0130eb69cc46650cb0e77eef90f618c20d7614b3f1787cefb1b8f49c7",
+  "release_date": "2026-03-22T09:19:11Z"
 }
 ]
