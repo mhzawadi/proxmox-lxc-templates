@@ -2,8 +2,8 @@
 
 Custom LXC container templates for Proxmox VE. Pre-configured, optimized, and ready to deploy.
 
-[![Build](https://github.com/Deroy2112/proxmox-lxc-templates/actions/workflows/build-debian-13.yml/badge.svg)](https://github.com/Deroy2112/proxmox-lxc-templates/actions/workflows/build-debian-13.yml)
-[![License](https://img.shields.io/github/license/Deroy2112/proxmox-lxc-templates)](LICENSE)
+[![Build](https://github.com/mhzawadi/proxmox-lxc-templates/actions/workflows/build-debian-13.yml/badge.svg)](https://github.com/mhzawadi/proxmox-lxc-templates/actions/workflows/build-debian-13.yml)
+[![License](https://img.shields.io/github/license/mhzawadi/proxmox-lxc-templates)](LICENSE)
 
 ## Overview
 
@@ -14,18 +14,19 @@ This project provides production-ready LXC container templates built with GitHub
 - Consistent UID/GID mapping for shared storage
 - Minimal footprint with only required packages
 
-**Website:** https://deroy2112.github.io/proxmox-lxc-templates/
+**Website:** https://mhzawadi.github.io/proxmox-lxc-templates/
 
 ## Available Templates
 
 | Template | Description | Version |
 |----------|-------------|---------|
-| [Jellyfin](https://deroy2112.github.io/proxmox-lxc-templates/#jellyfin) | Media Server | 10.10.3 |
-| [Shoko](https://deroy2112.github.io/proxmox-lxc-templates/#shoko) | Anime Server | 5.1.0 |
-| [Nginx](https://deroy2112.github.io/proxmox-lxc-templates/#nginx) | Web Server | 1.26.0 |
-| [Nginx Proxy Manager](https://deroy2112.github.io/proxmox-lxc-templates/#nginx-proxy-manager) | Reverse Proxy | 2.13.5 |
-| [JDownloader](https://deroy2112.github.io/proxmox-lxc-templates/#jdownloader) | Download Manager | 2.0 |
-| [ecoDMS](https://deroy2112.github.io/proxmox-lxc-templates/#ecodms) | Document Management | 25.02 |
+| [Shoko](https://mhzawadi.github.io/proxmox-lxc-templates/#shoko) | Anime Server | 5.1.0 |
+| [Nginx Proxy Manager](https://mhzawadi.github.io/proxmox-lxc-templates/#nginx-proxy-manager) | Reverse Proxy | 2.13.5 |
+| [JDownloader](https://mhzawadi.github.io/proxmox-lxc-templates/#jdownloader) | Download Manager | 2.0 |
+| [ecoDMS](https://mhzawadi.github.io/proxmox-lxc-templates/#ecodms) | Document Management | 25.02 |
+| [Jellyfin](https://mhzawadi.github.io/proxmox-lxc-templates/#jellyfin) | Media Server | 10.11.6 |
+| [Nginx](https://mhzawadi.github.io/proxmox-lxc-templates/#nginx) | Web Server | 1.28.2 |
+| [Nextcloud](https://mhzawadi.github.io/proxmox-lxc-templates/#nextcloud) | cloud storage | 32.0.6 |
 
 ## Installation
 
@@ -33,7 +34,7 @@ This project provides production-ready LXC container templates built with GitHub
 
 1. Navigate to **Datacenter** > **Storage** > **local** > **CT Templates**
 2. Click **Download from URL**
-3. Copy the URL and SHA-512 checksum from the [website](https://deroy2112.github.io/proxmox-lxc-templates/)
+3. Copy the URL and SHA-512 checksum from the [website](https://mhzawadi.github.io/proxmox-lxc-templates/)
 4. Paste both values and click **Query URL** then **Download**
 
 ### CLI
@@ -47,7 +48,7 @@ pvesh create /nodes/$(hostname)/storage/local/download-url \
   --checksum-algorithm sha512
 ```
 
-Get the complete command with all values from the [website](https://deroy2112.github.io/proxmox-lxc-templates/).
+Get the complete command with all values from the [website](https://mhzawadi.github.io/proxmox-lxc-templates/).
 
 ## Update Containers
 

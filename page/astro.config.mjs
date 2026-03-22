@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://deroy2112.github.io",
+  site: "https://mhzawadi.github.io",
   base: "/proxmox-lxc-templates",
   build: {
     assets: "assets",
