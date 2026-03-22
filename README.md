@@ -20,13 +20,10 @@ This project provides production-ready LXC container templates built with GitHub
 
 | Template | Description | Version |
 |----------|-------------|---------|
-| [Shoko](https://mhzawadi.github.io/proxmox-lxc-templates/#shoko) | Anime Server | 5.1.0 |
-| [Nginx Proxy Manager](https://mhzawadi.github.io/proxmox-lxc-templates/#nginx-proxy-manager) | Reverse Proxy | 2.13.5 |
-| [JDownloader](https://mhzawadi.github.io/proxmox-lxc-templates/#jdownloader) | Download Manager | 2.0 |
-| [ecoDMS](https://mhzawadi.github.io/proxmox-lxc-templates/#ecodms) | Document Management | 25.02 |
 | [Jellyfin](https://mhzawadi.github.io/proxmox-lxc-templates/#jellyfin) | Media Server | 10.11.6 |
 | [Nginx](https://mhzawadi.github.io/proxmox-lxc-templates/#nginx) | Web Server | 1.28.2 |
 | [Nextcloud](https://mhzawadi.github.io/proxmox-lxc-templates/#nextcloud) | cloud storage | 32.0.6 |
+| [Vaultwarden](https://mhzawadi.github.io/proxmox-lxc-templates/#vaultwarden) | Unofficial Bitwarden | 1.35.4 |
 
 ## Installation
 
