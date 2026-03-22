@@ -97,7 +97,7 @@ jobs:
       # Cache: Full base system (debootstrap + configured)
       - name: Cache base system
         id: cache-base
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: base-system-cache.tar.zst
           key: base-system-trixie-amd64-v3
@@ -188,7 +188,7 @@ jobs:
 
       # APT Package Cache for template-specific packages
       - name: Cache APT packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: /tmp/apt-cache
           key: apt-${{ matrix.template }}-${{ hashFiles(format('templates/{0}/debian-13/config.yml', matrix.template)) }}
