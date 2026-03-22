@@ -2,7 +2,7 @@ name: jellyfin
 description: Jellyfin Media Server on Debian 13 (Trixie)
 category: media
 icon: jellyfin
-version: 10.10.3
+version: 10.11.6
 build_version: 1
 base_os: debian-13
 architecture: amd64
