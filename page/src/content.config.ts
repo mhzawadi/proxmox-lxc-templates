@@ -8,7 +8,7 @@ import { glob } from 'astro/loaders';
  * Generated from templates config.yml files during CI build.
  */
 const templates = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{yml,yaml}', base: "../templates/*/debian-13/" }),
+  loader: glob({ pattern: '**/[^_]*.{yml,yaml}', base: "./src/content/templates/" }),
   schema: z.object({
     // Basic Info
     name: z.string(),
