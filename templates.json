@@ -187,9 +187,8 @@
       "answer": "Set up a reverse proxy (e.g., nginx) with SSL,\nor use Jellyfin's built-in HTTPS on port 8920.\n"
     }
   ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.6-1-jellyfin/deroy2112-debian-13-jellyfin_10.11.6-1_amd64.tar.zst",
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.6-1-jellyfin/mhzawadi-debian-13-jellyfin_10.11.6-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.11.6-1-jellyfin",
-  "sha512": "9fe20d76ade96878127e4b30c2a8e52b826a95f0345d69dab1d6347a23698176929525245ba9b1fe5e9871e2d67849ce1032d51bdbb66482f272e761f6be80f2",
   "release_date": "2026-03-22T09:19:05Z"
 }
 ,
@@ -234,9 +233,8 @@
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
   ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-1-nextcloud/deroy2112-debian-13-nextcloud_32.0.6-1_amd64.tar.zst",
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-1-nextcloud/mhzawadi-debian-13-nextcloud_32.0.6-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-1-nextcloud",
-  "sha512": "0cbfb4b2bcbc441d5f7ffa878d4ccebc2d92cb67ca7a1657eaddba84d735d65be1ca153eb5db624ccfd8fb5f0af7126749cf90a8532d421e7c6c7f544e794ed9",
   "release_date": "2026-03-18T08:34:07Z"
 }
 ,
@@ -378,9 +376,8 @@
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
   ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.2-2-nginx/deroy2112-debian-13-nginx_1.28.2-2_amd64.tar.zst",
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.2-2-nginx/mhzawadi-debian-13-nginx_1.28.2-2_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.28.2-2-nginx",
-  "sha512": "97bd3fef90b9956370e741b0a9187df698f616044789ef07beac6544996dc57654bbe66eb551c34b43bebcdb820bef12c93069082fb33ee73afcc7a630560e6e",
   "release_date": "2026-03-18T12:29:09Z"
 }
 ,
@@ -509,9 +506,8 @@
       "answer": "Add to /etc/vaultwarden/vaultwarden.env:\n  SIGNUPS_ALLOWED=false\nRestart: systemctl restart vaultwarden\n"
     }
   ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.35.4-1-vaultwarden/deroy2112-debian-13-vaultwarden_1.35.4-1_amd64.tar.zst",
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.35.4-1-vaultwarden/mhzawadi-debian-13-vaultwarden_1.35.4-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.35.4-1-vaultwarden",
-  "sha512": "21e2f07493bf3ad7d96a1103542d0f7a175be08cfcf2a165d1d657a399f88a2dd21c03d0130eb69cc46650cb0e77eef90f618c20d7614b3f1787cefb1b8f49c7",
   "release_date": "2026-03-22T09:19:11Z"
 }
 ]
