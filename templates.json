@@ -62,6 +62,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.6-1-jellyfin/mhzawadi-debian-13-jellyfin_10.11.6-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.11.6-1-jellyfin",
+  "sha512": "4836df719d90d66fd4f5caa4385d40c048c7b487b9aa00d8cbc8aedcce1a7441567804d829bb8acf4b71f6b4e485bbcf8291b1e7d3389725ca9a87dadedf6d30",
   "release_date": "2026-03-22T09:19:05Z"
 }
 ,
@@ -108,6 +109,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v32.0.6-1-nextcloud/mhzawadi-debian-13-nextcloud_32.0.6-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v32.0.6-1-nextcloud",
+  "sha512": "857d5fbfc1ffb1d94a7513f093b14fc32b763972ecf0aef30a043ad51f35b9f2c52849ca71ab84bc414ccd1f5a1b86f12cf8079f90b14eef7ce50d7f946e00de",
   "release_date": "2026-03-18T08:34:07Z"
 }
 ,
@@ -173,6 +175,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.2-2-nginx/mhzawadi-debian-13-nginx_1.28.2-2_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.28.2-2-nginx",
+  "sha512": "ee5f2150621e77ec122239f925885f251b7a7e30c9e389931bc3df927b66d77d628fd1c946aa1c7720991ee41f1c5fa285128b309db91ea404bfc1653c51d0b7",
   "release_date": "2026-03-18T12:29:09Z"
 }
 ,
@@ -248,6 +251,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.35.4-1-vaultwarden/mhzawadi-debian-13-vaultwarden_1.35.4-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.35.4-1-vaultwarden",
+  "sha512": "a106d1a413a6a6986a820f1411014bee5bd58b127614af5c3701059f95c04c0ad3cf593887fcce777bbeb6c045d036bc8e07ee950320d4c4331fa7ff015b22dc",
   "release_date": "2026-03-22T09:19:11Z"
 }
 ]
