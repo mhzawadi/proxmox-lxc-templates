@@ -2,8 +2,8 @@ name: nginx
 description: Nginx webserver on Debian 13 (Trixie)
 category: network
 icon: nginx
-version: 1.28.2
-build_version: 2
+version: 1.28.3
+build_version: 1
 base_os: debian-13
 architecture: amd64
 maintainer: Deroy2112 <81692934+Deroy2112@users.noreply.github.com>

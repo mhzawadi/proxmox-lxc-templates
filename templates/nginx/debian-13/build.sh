@@ -27,7 +27,7 @@ EOF
 
 apt-get update
 apt-get install -y --no-install-recommends \
-nginx
+nginx-1.28.3
 
 # === Create shared group for volumes (if configured) ===
 if [[ -n "${TEMPLATE_GID:-}" ]]; then
