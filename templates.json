@@ -62,7 +62,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.6-1-jellyfin/mhzawadi-debian-13-jellyfin_10.11.6-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.11.6-1-jellyfin",
-  "sha512": "4836df719d90d66fd4f5caa4385d40c048c7b487b9aa00d8cbc8aedcce1a7441567804d829bb8acf4b71f6b4e485bbcf8291b1e7d3389725ca9a87dadedf6d30",
+  "sha512": "cd56eefe4e046f5b7279a2f14fa2c576f00b8e963fc69442dd1b12239f96a2d15110f19dec70a16b3e44c06bd55cbe109ce043ed3e032b7e0ce78c503c6c3a79",
   "release_date": "2026-03-22T09:19:05Z"
 }
 ,
@@ -106,7 +106,11 @@
       "question": "Where is my data?",
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v33.0.1-1-nextcloud/mhzawadi-debian-13-nextcloud_33.0.1-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v33.0.1-1-nextcloud",
+  "sha512": "3ab6553139ca923f58af6fd6443f44a1b57ed4e088a993d29cc2f207760c8214bb6845337a45424072d90c9ef33a65408221729dc76627d98c675ce63e7da582",
+  "release_date": "2026-03-27T21:16:04Z"
 }
 ,
 {
@@ -168,7 +172,11 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.3-1-nginx/mhzawadi-debian-13-nginx_1.28.3-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.28.3-1-nginx",
+  "sha512": "19056a877fb58f2e4071ed64dc7cb60cab3b29b162a1072389e7b49db7c6cd42d6c3cec5e1faa879a104a48dbd3707e611ff598338d729a48c9cf98ce80e70d1",
+  "release_date": "2026-03-27T21:16:09Z"
 }
 ,
 {
@@ -243,7 +251,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.35.4-1-vaultwarden/mhzawadi-debian-13-vaultwarden_1.35.4-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.35.4-1-vaultwarden",
-  "sha512": "a106d1a413a6a6986a820f1411014bee5bd58b127614af5c3701059f95c04c0ad3cf593887fcce777bbeb6c045d036bc8e07ee950320d4c4331fa7ff015b22dc",
+  "sha512": "3f14e8bd7b24a8b160cc6a74dc4b8f40faa1408986aa7ec4e6db81622b1197d5b0decfb4f9a805afd9f55f934e1f8c5ae63a3fa26105abba7943ec1300161db3",
   "release_date": "2026-03-22T09:19:11Z"
 }
 ]
