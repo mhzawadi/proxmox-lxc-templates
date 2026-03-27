@@ -114,8 +114,8 @@
   "description": "Nginx webserver on Debian 13 (Trixie)",
   "category": "network",
   "icon": "nginx",
-  "version": "1.28.2",
-  "build_version": 2,
+  "version": "1.28.3",
+  "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "Deroy2112 <81692934+Deroy2112@users.noreply.github.com>",
@@ -168,11 +168,7 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.28.2-2-nginx/mhzawadi-debian-13-nginx_1.28.2-2_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.28.2-2-nginx",
-  "sha512": "ee5f2150621e77ec122239f925885f251b7a7e30c9e389931bc3df927b66d77d628fd1c946aa1c7720991ee41f1c5fa285128b309db91ea404bfc1653c51d0b7",
-  "release_date": "2026-03-18T12:29:09Z"
+  ]
 }
 ,
 {
