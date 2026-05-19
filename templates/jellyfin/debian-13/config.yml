@@ -6,7 +6,7 @@ version: 10.11.6
 build_version: 1
 base_os: debian-13
 architecture: amd64
-maintainer: Deroy2112 <81692934+Deroy2112@users.noreply.github.com>
+maintainer: mhzawadi <11944327+mhzawadi@users.noreply.github.com>
 project_url: https://jellyfin.org
 
 user:

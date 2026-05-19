@@ -17,5 +17,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - template-update tool for in-container updates
 - Automatic service enablement
 
-[Unreleased]: https://github.com/deroy2112/proxmox-lxc-templates/compare/v10.10.3-1-jellyfin...HEAD
-[10.10.3-1]: https://github.com/deroy2112/proxmox-lxc-templates/releases/tag/v10.10.3-1-jellyfin
+[Unreleased]: https://github.com/mhzawadi/proxmox-lxc-templates/compare/v10.10.3-1-jellyfin...HEAD
+[10.10.3-1]: https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.10.3-1-jellyfin
