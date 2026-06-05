@@ -22,7 +22,7 @@ fi
 
 # === Add nginx and PHP repository ===
 mkdir -p /etc/apt/keyrings
-curl -fsSL https://packages.sury.org/nginx/apt.gpg |
+curl -fsSL https://packages.sury.org/php/apt.gpg |
 	gpg --dearmor -o /etc/apt/keyrings/php.gpg
 chmod 644 /etc/apt/keyrings/php.gpg
 
