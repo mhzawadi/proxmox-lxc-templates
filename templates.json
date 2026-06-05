@@ -172,7 +172,7 @@
   "description": "A Community-led Hyper-Hackable Text Editor",
   "category": "development",
   "icon": "pulsarr",
-  "version": "1.132.1",
+  "version": "1.132.1-1",
   "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
