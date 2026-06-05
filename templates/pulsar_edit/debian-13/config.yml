@@ -1,7 +1,7 @@
 name: pulsar-edit
 description: A Community-led Hyper-Hackable Text Editor
 category: IDE
-icon: pulsar
+icon: pulsarr
 version: 1.132.1
 build_version: 1
 base_os: debian-13
