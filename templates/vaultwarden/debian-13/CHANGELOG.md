@@ -16,3 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Systemd service with security hardening
 - Default configuration with common options documented
 - In-place update support via template-update tool
+
+## [1.34.3-1] - 2025-01-24
+
+### Added
+- updated to 1.36.0

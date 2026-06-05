@@ -17,5 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - template-update tool for in-container updates
 - Automatic service enablement
 
-[Unreleased]: https://github.com/deroy2112/proxmox-lxc-templates/compare/v1.26.0-1-nginx...HEAD
-[1.26.0-1]: https://github.com/deroy2112/proxmox-lxc-templates/releases/tag/v1.26.0-1-nginx
+[Unreleased]: https://github.com/mhzawadi/proxmox-lxc-templates/compare/v1.26.0-1-nginx...HEAD
+[1.26.0-1]: https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.26.0-1-nginx
+
+## [1.26.0-1] - 2025-01-15
+
+### Added
+- updated to 1.30.2
