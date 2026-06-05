@@ -170,7 +170,7 @@
 {
   "name": "pulsar-edit",
   "description": "A Community-led Hyper-Hackable Text Editor",
-  "category": "IDE",
+  "category": "development",
   "icon": "pulsarr",
   "version": "1.132.1",
   "build_version": 1,
