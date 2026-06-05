@@ -12,6 +12,8 @@ export VNC_RESOLUTION=1280x900
 export DEBIAN_FRONTEND=noninteractive
 export TERM=xterm
 
+readonly PULSAR_VER="${TEMPLATE_VERSION%-*}"
+
 # === Install dependencies ===
 apt-get update && \
 apt-get install --no-install-recommends -y \
