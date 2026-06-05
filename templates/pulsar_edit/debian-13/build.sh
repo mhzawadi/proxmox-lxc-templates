@@ -33,7 +33,7 @@ if [[ -n "${TEMPLATE_GID:-}" ]]; then
 fi
 
 if [[ -n "${TEMPLATE_UID:-}" ]]; then
-	useradd -r -u "$TEMPLATE_UID" -g shared -d /var/lib/pulsar -s /usr/sbin/nologin pulsar
+  useradd -r -u "$TEMPLATE_UID" -g shared -m pulsar
 else
 	useradd -r -g shared -d /var/lib/pulsar -s /usr/sbin/nologin pulsar
 fi
