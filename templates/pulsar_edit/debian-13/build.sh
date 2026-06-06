@@ -42,6 +42,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*;
 rm -f ./${APT_FILE}
 
 # === Create systemd service ===
+ls -R /tmp
 mv /tmp/files/boot.sh /home/pulsar/boot.sh
 cat > /var/spool/cron/crontabs/pulsar << 'EOF'
 @reboot /home/pulsar/boot.sh
