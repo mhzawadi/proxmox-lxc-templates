@@ -299,7 +299,7 @@ jobs:
         with:
           name: template-${{ matrix.template }}
           path: |
-            ${{ CONFIG }}
+            templates/${{ matrix.template }}/debian-13/config.yml
             ${{ runner.temp }}/${{ steps.config.outputs.template_file }}
             ${{ runner.temp }}/${{ steps.config.outputs.template_file }}.sha512
 
