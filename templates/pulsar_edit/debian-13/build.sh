@@ -14,6 +14,7 @@ apt-get install --no-install-recommends -y \
   wget sudo git bzip2 python3 ca-certificates \
   tigervnc-standalone-server tigervnc-common firefox-esr; \
 apt-get clean; \
+mv /tmp/files/boot.sh /home/pulsar/boot.sh; \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
 mkdir /src; \
 git clone --branch v1.7.0 --single-branch https://github.com/novnc/noVNC.git /opt/noVNC; \
@@ -38,8 +39,6 @@ wget https://github.com/pulsar-edit/pulsar/releases/download/v${PULSAR_VER}/${AP
 apt-get update;
 apt-get -y install ./${APT_FILE}
 apt-get clean;
-ls -R /tmp
-mv /tmp/files/boot.sh /home/pulsar/boot.sh
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*;
 rm -f ./${APT_FILE}
 
