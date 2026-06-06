@@ -229,6 +229,7 @@ jobs:
 
           if [[ -d "templates/${{ matrix.template }}/debian-13/files" ]]; then
             sudo cp -r "templates/${{ matrix.template }}/debian-13/files" "$ROOTFS/tmp/files"
+            ls -R "$ROOTFS/tmp"
           fi
 
           TEMPLATE_VERSION="${{ steps.config.outputs.full_version }}"
@@ -286,6 +287,7 @@ jobs:
 
       - name: Create tar.zst archive
         run: |
+          cp templates/${{ matrix.template }}/debian-13/config.yml "${{ runner.temp }}"
           cd "$ROOTFS"
 
           sudo tar --numeric-owner --acls --xattrs \
@@ -299,8 +301,16 @@ jobs:
         with:
           name: template-${{ matrix.template }}
           path: |
+            ${{ runner.temp }}/config.yml
             ${{ runner.temp }}/${{ steps.config.outputs.template_file }}
             ${{ runner.temp }}/${{ steps.config.outputs.template_file }}.sha512
+
+      - name: Upload dummy artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: horwood
+          path: |
+            ${{ runner.temp }}/config.yml
 
   release:
     needs: [detect-changes, build]
@@ -315,6 +325,9 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           path: artifacts
+
+      - name: Display structure of downloaded files
+        run: ls -R artifacts
 
       - name: Create releases
         env:

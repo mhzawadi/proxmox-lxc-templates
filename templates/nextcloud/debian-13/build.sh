@@ -22,7 +22,7 @@ fi
 
 # === Add nginx and PHP repository ===
 mkdir -p /etc/apt/keyrings
-curl -fsSL https://packages.sury.org/nginx/apt.gpg |
+curl -fsSL https://packages.sury.org/php/apt.gpg |
 	gpg --dearmor -o /etc/apt/keyrings/php.gpg
 chmod 644 /etc/apt/keyrings/php.gpg
 
@@ -117,8 +117,8 @@ ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.c
 mkdir /var/www/
 mkdir /var/lib/nextcloud
 mkdir /var/lib/nextcloud/config
-wget https://download.nextcloud.com/server/releases/nextcloud-32.0.6.zip
-unzip nextcloud-32.0.6.zip
+wget https://download.nextcloud.com/server/releases/nextcloud-33.0.4.zip
+unzip nextcloud-33.0.4.zip
 mv nextcloud /var/www/html
 mv /tmp/files/nextcloud_config.php /var/lib/nextcloud/config/config.php
 ln -s /var/lib/nextcloud/config/config.php /var/www/html/config/config.php

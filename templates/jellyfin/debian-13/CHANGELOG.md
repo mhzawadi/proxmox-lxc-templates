@@ -19,3 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/mhzawadi/proxmox-lxc-templates/compare/v10.10.3-1-jellyfin...HEAD
 [10.10.3-1]: https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.10.3-1-jellyfin
+
+## [10.11.10-1] - 2025-06-05
+
+### Added
+- update to 10.11.10
