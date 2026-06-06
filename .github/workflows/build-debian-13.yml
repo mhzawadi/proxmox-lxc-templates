@@ -127,56 +127,56 @@ jobs:
 
             # Configure base system (only on fresh build)
             sudo chroot "$ROOTFS" /bin/bash <<'BASESCRIPT'
-          set -euo pipefail
-          export DEBIAN_FRONTEND=noninteractive
+            set -euo pipefail
+            export DEBIAN_FRONTEND=noninteractive
 
-          # Locale
-          echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
-          locale-gen
+            # Locale
+            echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+            locale-gen
 
-          # Timezone
-          ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+            # Timezone
+            ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 
-          # Install ALL standard system packages (like official Proxmox templates)
-          apt-get update
-          apt-get install -y tasksel
-          tasksel install standard
+            # Install ALL standard system packages (like official Proxmox templates)
+            apt-get update
+            apt-get install -y tasksel
+            tasksel install standard
 
-          # Proxmox compatibility: disable networkd wait (prevents boot delays)
-          mkdir -p /etc/systemd/system-preset
-          echo "disable systemd-networkd-wait-online.service" > /etc/systemd/system-preset/00-pve-template.preset
+            # Proxmox compatibility: disable networkd wait (prevents boot delays)
+            mkdir -p /etc/systemd/system-preset
+            echo "disable systemd-networkd-wait-online.service" > /etc/systemd/system-preset/00-pve-template.preset
 
-          # Proxmox compatibility: install network tools
-          apt-get install -y ifupdown2 isc-dhcp-client
+            # Proxmox compatibility: install network tools
+            apt-get install -y ifupdown2 isc-dhcp-client
 
-          # Network interfaces - minimal config, Proxmox adds eth0 on container creation
-          {
-            echo "auto lo"
-            echo "iface lo inet loopback"
-          } > /etc/network/interfaces
+            # Network interfaces - minimal config, Proxmox adds eth0 on container creation
+            {
+              echo "auto lo"
+              echo "iface lo inet loopback"
+            } > /etc/network/interfaces
 
-          # Hostname placeholder (Proxmox sets this on container creation)
-          echo "localhost" > /etc/hostname
+            # Hostname placeholder (Proxmox sets this on container creation)
+            echo "localhost" > /etc/hostname
 
-          # Hosts file
-          {
-            echo "127.0.0.1   localhost"
-            echo "::1         localhost ip6-localhost ip6-loopback"
-            echo "ff02::1     ip6-allnodes"
-            echo "ff02::2     ip6-allrouters"
-          } > /etc/hosts
+            # Hosts file
+            {
+              echo "127.0.0.1   localhost"
+              echo "::1         localhost ip6-localhost ip6-loopback"
+              echo "ff02::1     ip6-allnodes"
+              echo "ff02::2     ip6-allrouters"
+            } > /etc/hosts
 
-          # Minimal fstab (Proxmox manages mounts)
-          echo "# Empty fstab - Proxmox manages container mounts" > /etc/fstab
+            # Minimal fstab (Proxmox manages mounts)
+            echo "# Empty fstab - Proxmox manages container mounts" > /etc/fstab
 
-          # Enable networking service (create symlink directly for chroot compatibility)
-          mkdir -p /etc/systemd/system/multi-user.target.wants
-          ln -sf /lib/systemd/system/networking.service /etc/systemd/system/multi-user.target.wants/networking.service
+            # Enable networking service (create symlink directly for chroot compatibility)
+            mkdir -p /etc/systemd/system/multi-user.target.wants
+            ln -sf /lib/systemd/system/networking.service /etc/systemd/system/multi-user.target.wants/networking.service
 
-          # Clean APT cache before caching base system
-          apt-get clean
-          rm -rf /var/lib/apt/lists/*
-          BASESCRIPT
+            # Clean APT cache before caching base system
+            apt-get clean
+            rm -rf /var/lib/apt/lists/*
+            BASESCRIPT
 
             # Cache the fully configured base system
             echo "::notice::Saving configured base system to cache..."
@@ -299,6 +299,7 @@ jobs:
         with:
           name: template-${{ matrix.template }}
           path: |
+            ${{ CONFIG }}
             ${{ runner.temp }}/${{ steps.config.outputs.template_file }}
             ${{ runner.temp }}/${{ steps.config.outputs.template_file }}.sha512
 
