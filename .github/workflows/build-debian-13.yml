@@ -286,12 +286,12 @@ jobs:
 
       - name: Create tar.zst archive
         run: |
+          cp templates/${{ matrix.template }}/debian-13/config.yml "${{ runner.temp }}"
           cd "$ROOTFS"
 
           sudo tar --numeric-owner --acls --xattrs \
             -cf - . | zstd -T0 -9 -o "${{ runner.temp }}/${{ steps.config.outputs.template_file }}"
 
-          cp templates/${{ matrix.template }}/debian-13/config.yml "${{ runner.temp }}"
           cd "${{ runner.temp }}"
           sha512sum "${{ steps.config.outputs.template_file }}" > "${{ steps.config.outputs.template_file }}.sha512"
 
