@@ -42,11 +42,13 @@ apt-get clean;
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*;
 rm -f ./${APT_FILE}
 mv /home/boot.sh /home/pulsar/boot.sh
+chmod +x /home/pulsar/boot.sh
 
 # === Create systemd service ===
 cat > /var/spool/cron/crontabs/pulsar << 'EOF'
 @reboot /home/pulsar/boot.sh
 EOF
+chmod 600 /var/spool/cron/crontabs/pulsar
 
 # === Template info ===
 cat > /etc/template-info << EOF
