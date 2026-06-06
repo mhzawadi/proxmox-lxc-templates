@@ -316,12 +316,13 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           path: artifacts
+      - name: Display structure of downloaded files
+        run: ls -R artifacts
 
       - name: Create releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ls -l artifacts/*/;
           for dir in artifacts/template-*/; do
             template=$(basename "$dir" | sed 's/template-//')
 
