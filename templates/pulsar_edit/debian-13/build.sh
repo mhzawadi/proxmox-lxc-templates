@@ -38,6 +38,7 @@ wget https://github.com/pulsar-edit/pulsar/releases/download/v${PULSAR_VER}/${AP
 apt-get update;
 apt-get -y install ./${APT_FILE}
 apt-get clean;
+ls -R /tmp
 mv /tmp/files/boot.sh /home/pulsar/boot.sh
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*;
 rm -f ./${APT_FILE}
