@@ -14,6 +14,7 @@ apt-get install --no-install-recommends -y \
   wget sudo git bzip2 python3 ca-certificates \
   tigervnc-standalone-server tigervnc-common firefox-esr; \
 apt-get clean; \
+ls -R /tmp; \
 mv /tmp/files/boot.sh /home/pulsar/boot.sh; \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
 mkdir /src; \
