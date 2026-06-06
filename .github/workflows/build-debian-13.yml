@@ -229,7 +229,7 @@ jobs:
 
           if [[ -d "templates/${{ matrix.template }}/debian-13/files" ]]; then
             sudo cp -r "templates/${{ matrix.template }}/debian-13/files" "$ROOTFS/tmp/files"
-            ls -R "$ROOTFS/tmp/files"
+            ls -R "$ROOTFS/tmp"
           fi
 
           TEMPLATE_VERSION="${{ steps.config.outputs.full_version }}"
