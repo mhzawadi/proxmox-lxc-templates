@@ -4,13 +4,6 @@
 set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
-export DISPLAY=:1
-export VNC_PORT=5901
-export NO_VNC_PORT=8080
-export VNC_COL_DEPTH=32
-export VNC_RESOLUTION=1280x900
-export DEBIAN_FRONTEND=noninteractive
-export TERM=xterm
 
 readonly PULSAR_VER="${TEMPLATE_VERSION%-*}"
 
@@ -49,33 +42,9 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*;
 rm -f ./${APT_FILE}
 
 # === Create systemd service ===
-cat > /home/pulsar/.profile << 'EOF'
-if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
-  echo "Run a thing"
-  pulsar
-fi
-EOF
-
+mv /tmp/files/boot.sh /home/pulsar/boot.sh
 cat > /var/spool/cron/crontabs/pulsar << 'EOF'
-@reboot /opt/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 8080
-EOF
-
-cat > /etc/systemd/system/vncserver.service << 'EOF'
-[Unit]
-Description=Start TigerVNC server at startup
-After=network.target
-
-[Service]
-Type=forking
-User=USERNAME
-PAMName=login
-PIDFile=/home/pulsar/.vnc/%H:1.pid
-ExecStart=/usr/bin/tigervncserver -depth 32 -geometry 1280x900 -SecurityTypes None -localhost no --I-KNOW-THIS-IS-INSECURE
-ExecStop=/usr/bin/tigervncserver -kill :1
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
+@reboot /home/pulsar/boot.sh
 EOF
 
 # === Template info ===
@@ -93,7 +62,6 @@ curl -fsSL "${repo_raw_url}/scripts/template-update.sh" \
 chmod +x /usr/local/bin/template-update
 
 # === Enable services ===
-systemctl enable vncserver
 
 # === Cleanup ===
 apt-get clean
