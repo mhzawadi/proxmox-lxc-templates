@@ -57,7 +57,7 @@ fi
 EOF
 
 cat > /var/spool/cron/crontabs/pulsar << 'EOF'
-@reboot /opt/noVNC/utils/novnc_proxy --vnc localhost:$VNC_PORT --listen $NO_VNC_PORT
+@reboot /opt/noVNC/utils/novnc_proxy --vnc localhost:5901 --listen 8080
 EOF
 
 cat > /etc/systemd/system/vncserver.service << 'EOF'
@@ -70,7 +70,7 @@ Type=forking
 User=USERNAME
 PAMName=login
 PIDFile=/home/pulsar/.vnc/%H:1.pid
-ExecStart=/usr/bin/tigervncserver -depth $VNC_COL_DEPTH -geometry $VNC_RESOLUTION -SecurityTypes None -localhost no --I-KNOW-THIS-IS-INSECURE
+ExecStart=/usr/bin/tigervncserver -depth 32 -geometry 1280x900 -SecurityTypes None -localhost no --I-KNOW-THIS-IS-INSECURE
 ExecStop=/usr/bin/tigervncserver -kill :1
 Restart=always
 
