@@ -59,7 +59,11 @@
       "question": "How do I access Jellyfin remotely?",
       "answer": "Set up a reverse proxy (e.g., nginx) with SSL,\nor use Jellyfin's built-in HTTPS on port 8920.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.10-2-jellyfin/mhzawadi-debian-13-jellyfin_10.11.10-2_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.11.10-2-jellyfin",
+  "sha512": "c63392b119b55e88ab2cb6b5127a6d58232e0a5b8355744eab9314165322d744f196dd4444233e9993d5703d0e1bf7f2c9bee22f17b04dfb5f0451a487fe47e2",
+  "release_date": "2026-06-06T09:59:35Z"
 }
 ,
 {
@@ -102,7 +106,11 @@
       "question": "Where is my data?",
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v33.0.5-1-nextcloud/mhzawadi-debian-13-nextcloud_33.0.5-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v33.0.5-1-nextcloud",
+  "sha512": "d7681e1bab25a8ee47413ce0059ad05338c5f682174d5d0346af15d1f6b1aadb0d08c89030ef00c15f95e0dd70fb3e7426bfe401b0c364660f6b1a951bfd604d",
+  "release_date": "2026-06-06T09:59:53Z"
 }
 ,
 {
@@ -164,7 +172,11 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.30.2-2-nginx/mhzawadi-debian-13-nginx_1.30.2-2_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.30.2-2-nginx",
+  "sha512": "d7db104ccbe949f546b368be281d19bf3366ee0ca1990c3a7f3070cef9ebe27b6a45c2f0744599b36563fa3fc410fd3a5339441c03dfd21f3f06b2ef18098f76",
+  "release_date": "2026-06-06T09:59:58Z"
 }
 ,
 {
@@ -304,6 +316,10 @@
       "question": "How do I disable new user registration?",
       "answer": "Add to /etc/vaultwarden/vaultwarden.env:\n  SIGNUPS_ALLOWED=false\nRestart: systemctl restart vaultwarden\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.36.0-2-vaultwarden/mhzawadi-debian-13-vaultwarden_1.36.0-2_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.36.0-2-vaultwarden",
+  "sha512": "cd33362b2ebc453fe9e0a0af600f43fe1e4f5b5bf4791757a553bdee835a72c961a001fb92296006033cd6ada00d6ad46459cfd50c555cf3e24ef5ec044aa987",
+  "release_date": "2026-06-06T10:00:22Z"
 }
 ]
