@@ -9,3 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 - Initial Pulsar Edit template release
+- fix boot script

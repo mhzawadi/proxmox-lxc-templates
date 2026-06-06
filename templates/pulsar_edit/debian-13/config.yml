@@ -3,7 +3,7 @@ description: A Community-led Hyper-Hackable Text Editor
 category: development
 icon: pulsarr
 version: 1.132.1
-build_version: 4
+build_version: 5
 base_os: debian-13
 architecture: amd64
 maintainer: mhzawadi <11944327+mhzawadi@users.noreply.github.com>
