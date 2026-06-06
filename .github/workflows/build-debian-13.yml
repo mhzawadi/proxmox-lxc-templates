@@ -293,7 +293,7 @@ jobs:
 
           cd "${{ runner.temp }}"
           sha512sum "${{ steps.config.outputs.template_file }}" > "${{ steps.config.outputs.template_file }}.sha512"
-          cp templates/${{ matrix.template }}/debian-13/config.yml "${{ runner.temp }}""
+          cp templates/${{ matrix.template }}/debian-13/config.yml "${{ runner.temp }}"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v7
