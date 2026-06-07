@@ -1,4 +1,6 @@
 ---
+import 'simple-icons-astro'
+
 interface Props {
   name: string;
   description: string;
@@ -29,8 +31,7 @@ const {
   templateData,
 } = Astro.props;
 
-const iconUrlSvg = `https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons@main/svg/${icon}.svg`;
-const iconUrlPng = `https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons@main/png/${icon}.png`;
+const icon_frag = `${icon}`
 const delay = Math.min(index * 0.05, 0.5);
 const displayName = name.charAt(0).toUpperCase() + name.slice(1);
 
@@ -51,17 +52,9 @@ const categoryDisplay = category.charAt(0).toUpperCase() + category.slice(1);
   <!-- Header: Icon + Title -->
   <div class="app-card-header">
     <div class="app-icon">
-      <img
-        src={iconUrlSvg}
-        alt=""
-        loading="lazy"
-        data-png-fallback={iconUrlPng}
-        onerror="if(this.dataset.pngFallback){this.onerror=()=>{this.style.display='none';this.nextElementSibling.style.display='flex'};this.src=this.dataset.pngFallback;delete this.dataset.pngFallback}else{this.style.display='none';this.nextElementSibling.style.display='flex'}"
-      />
-      <!-- Fallback Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" style="display: none;">
-        <path d="M216,72H56a8,8,0,0,1,0-16H192a8,8,0,0,0,0-16H56A24,24,0,0,0,32,64V192a24,24,0,0,0,24,24H216a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72Zm0,128H56a8,8,0,0,1-8-8V86.63A23.84,23.84,0,0,0,56,88H216Z" />
-      </svg>
+      <Layout>
+        <Fragment icon_frag />
+      </Layout>
     </div>
 
     <div class="app-info">
