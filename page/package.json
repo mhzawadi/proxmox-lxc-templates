@@ -8,8 +8,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^6.0.8",
-    "simple-icons-astro": "^16.1.0"
+    "astro": "^6.0.8"
   },
   "devDependencies": {
     "typescript": "^6.0.3"

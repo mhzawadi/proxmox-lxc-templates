@@ -40,6 +40,8 @@ CLAUDE.md
 
 # Node.js
 node_modules/
+page/src/content
+**/package-lock.json
 
 # Local development
 .env
