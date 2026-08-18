@@ -137,7 +137,7 @@
   "description": "Nextcloud on Debian 13 (Trixie)",
   "category": "network",
   "icon": "nextcloud",
-  "version": "33.0.5",
+  "version": "34.0.3",
   "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
@@ -172,11 +172,7 @@
       "question": "Where is my data?",
       "answer": "All the user data is stored in `/var/lib/nextcloud`\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v33.0.5-1-nextcloud/mhzawadi-debian-13-nextcloud_33.0.5-1_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v33.0.5-1-nextcloud",
-  "sha512": "467c9ab635931b9e503f0e750ed736677061cf8b9667876f1b3f274f64814617d56e3d6ab36e336709ce3d9b5aaada33dc17ce949cd2170df248dd41f3ec1a3c",
-  "release_date": "2026-06-06T09:59:53Z"
+  ]
 }
 ,
 {
