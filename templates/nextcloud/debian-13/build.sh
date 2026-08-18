@@ -117,8 +117,8 @@ ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.c
 mkdir /var/www/
 mkdir /var/lib/nextcloud
 mkdir /var/lib/nextcloud/config
-wget https://download.nextcloud.com/server/releases/nextcloud-33.0.4.zip
-unzip nextcloud-33.0.4.zip
+wget https://download.nextcloud.com/server/releases/nextcloud-34.0.3.zip
+unzip nextcloud-34.0.3.zip
 mv nextcloud /var/www/html
 mv /tmp/files/nextcloud_config.php /var/lib/nextcloud/config/config.php
 ln -s /var/lib/nextcloud/config/config.php /var/www/html/config/config.php
