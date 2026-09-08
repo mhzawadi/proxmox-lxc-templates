@@ -2,8 +2,8 @@ name: vaultwarden
 description: Lightweight Bitwarden-compatible password manager written in Rust
 category: security
 icon: vaultwarden
-version: 1.36.0
-build_version: 2
+version: 1.37.2
+build_version: 1
 base_os: debian-13
 architecture: amd64
 maintainer: mhzawadi <11944327+mhzawadi@users.noreply.github.com>
