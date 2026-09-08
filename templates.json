@@ -70,8 +70,8 @@
   "description": "Jellyfin Media Server on Debian 13 (Trixie)",
   "category": "media",
   "icon": "jellyfin",
-  "version": "10.11.10",
-  "build_version": 2,
+  "version": "12.0",
+  "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "mhzawadi <11944327+mhzawadi@users.noreply.github.com>",
@@ -125,11 +125,7 @@
       "question": "How do I access Jellyfin remotely?",
       "answer": "Set up a reverse proxy (e.g., nginx) with SSL,\nor use Jellyfin's built-in HTTPS on port 8920.\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v10.11.10-2-jellyfin/mhzawadi-debian-13-jellyfin_10.11.10-2_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v10.11.10-2-jellyfin",
-  "sha512": "975e58cd8595fb89da32c65e4799ae9d90185bd1b0aa62c0aafec6a8f1d89ad0fca034942acc5dc5f190b4994b4f36846d205889f1b1c09f27c1976cdb865245",
-  "release_date": "2026-06-06T09:59:35Z"
+  ]
 }
 ,
 {
@@ -184,8 +180,8 @@
   "description": "Nginx webserver on Debian 13 (Trixie)",
   "category": "network",
   "icon": "nginx",
-  "version": "1.30.2",
-  "build_version": 2,
+  "version": "1.30.4",
+  "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "mhzawadi <11944327+mhzawadi@users.noreply.github.com>",
@@ -238,11 +234,7 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.30.2-2-nginx/mhzawadi-debian-13-nginx_1.30.2-2_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.30.2-2-nginx",
-  "sha512": "e1878669ba0345c1b1a33ec93136d22f1bd57729a984337cbc27a350afb8ae5e085128a1ee075bf9884414cb3103b925ce76642cece7de08bc80f11cc1b129d9",
-  "release_date": "2026-06-06T09:59:58Z"
+  ]
 }
 ,
 {
@@ -322,8 +314,8 @@
   "description": "Lightweight Bitwarden-compatible password manager written in Rust",
   "category": "security",
   "icon": "vaultwarden",
-  "version": "1.36.0",
-  "build_version": 2,
+  "version": "1.37.2",
+  "build_version": 1,
   "base_os": "debian-13",
   "architecture": "amd64",
   "maintainer": "mhzawadi <11944327+mhzawadi@users.noreply.github.com>",
@@ -386,10 +378,6 @@
       "question": "How do I disable new user registration?",
       "answer": "Add to /etc/vaultwarden/vaultwarden.env:\n  SIGNUPS_ALLOWED=false\nRestart: systemctl restart vaultwarden\n"
     }
-  ],
-  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.36.0-2-vaultwarden/mhzawadi-debian-13-vaultwarden_1.36.0-2_amd64.tar.zst",
-  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.36.0-2-vaultwarden",
-  "sha512": "c783f6f145fbeb91703d162e1829538419301398be03910eaf499416265fda6ae5e052e6228a816269979d6233ec62a0536f37d1940baf0fa410ff12eb6c77d7",
-  "release_date": "2026-06-06T10:00:22Z"
+  ]
 }
 ]
