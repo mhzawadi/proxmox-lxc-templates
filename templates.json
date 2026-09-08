@@ -61,7 +61,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v2.4.1-1-cachet/mhzawadi-debian-13-cachet_2.4.1-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v2.4.1-1-cachet",
-  "sha512": "c9e79c99b39ca7b57433dfacb6c22c0642aaaaff13f083df3c8c576f280d1604f11e2bcca81febcdce4be4cb7d43d27080ec40a601f4c08894c6410f329bf480",
+  "sha512": "2cd2a9caa931e730bb0d52ef8d79ef6627b0f0f006f03c3b862d32583e565849623eb94f831143dfeac233eca9b5b826bd20eb34e01632be8b96bfd4f7311c2c",
   "release_date": "2026-06-06T12:03:50Z"
 }
 ,
@@ -125,7 +125,11 @@
       "question": "How do I access Jellyfin remotely?",
       "answer": "Set up a reverse proxy (e.g., nginx) with SSL,\nor use Jellyfin's built-in HTTPS on port 8920.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v12.0-1-jellyfin/mhzawadi-debian-13-jellyfin_12.0-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v12.0-1-jellyfin",
+  "sha512": "a6e27b37c6e8e5629b3c759b7c3cad6334ff065ee81d7ed66cd7e8cfdd1da241b223fbc03040f6cc43f415ba3ade0e9cdd453c18b33d4b6a6d23875563a89c34",
+  "release_date": "2026-09-08T21:02:32Z"
 }
 ,
 {
@@ -171,7 +175,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v34.0.3-1-nextcloud/mhzawadi-debian-13-nextcloud_34.0.3-1_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v34.0.3-1-nextcloud",
-  "sha512": "5bf048600a6e0bfda76149a56ea8234aaae6509914a98701af6a1447306fcd46c6598d82aac199a233d8d46bd08ad6e55098911c54184d45d592effcb97f0613",
+  "sha512": "1185478d02b9f119f5d8247fb41f74903d4a544ce52a2739fcf6611329f63b192d8e3080e674b9cc6d515735c1aabb6e1ef593e2e17a62512a92924c939be7fb",
   "release_date": "2026-08-18T20:22:24Z"
 }
 ,
@@ -234,7 +238,11 @@
       "question": "How do I check for configuration errors?",
       "answer": "Run: nginx -t\nThis validates the configuration before reloading.\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.30.4-1-nginx/mhzawadi-debian-13-nginx_1.30.4-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.30.4-1-nginx",
+  "sha512": "fa5179e473a70c388bc5f4815f1b125664ebddcc9350d80c567c90b05d927493afdac94dbcca81d90eba5e37ce8496daf497ef09aef4c0ecb56fa0fe93587d3b",
+  "release_date": "2026-09-08T21:03:04Z"
 }
 ,
 {
@@ -305,7 +313,7 @@
   ],
   "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.132.1-6-pulsar-edit/mhzawadi-debian-13-pulsar-edit_1.132.1-6_amd64.tar.zst",
   "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.132.1-6-pulsar-edit",
-  "sha512": "6dbc0d7b8a74b0234f9a22b1b8d2e66f443e4828d6744060f9539bd0ac51b6c2227c226e108ee950498fcb3474f5af53f47550f222c2b50ceac3a5376abd3469",
+  "sha512": "7d731accca92324b8a2e977fc3faff4d0820058f76abf156cc9741371e58badac1bb7d051ba8ec6adc4d65d1ad9d589dc7ab2247be097f8adebe2c8533d9116b",
   "release_date": "2026-06-06T12:16:24Z"
 }
 ,
@@ -378,6 +386,10 @@
       "question": "How do I disable new user registration?",
       "answer": "Add to /etc/vaultwarden/vaultwarden.env:\n  SIGNUPS_ALLOWED=false\nRestart: systemctl restart vaultwarden\n"
     }
-  ]
+  ],
+  "download_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/download/v1.37.2-1-vaultwarden/mhzawadi-debian-13-vaultwarden_1.37.2-1_amd64.tar.zst",
+  "release_url": "https://github.com/mhzawadi/proxmox-lxc-templates/releases/tag/v1.37.2-1-vaultwarden",
+  "sha512": "9d2ac80aa852e61fa9afd59fa75d5dcdc6333c21b3d5e974dfc8790cace8cadd0c9774bb2119529e9a9179502eeef1bfd76523c83dcc3e4151b4c9f8860acd46",
+  "release_date": "2026-09-08T21:03:29Z"
 }
 ]
