@@ -20,10 +20,10 @@ This project provides production-ready LXC container templates built with GitHub
 
 | Template | Description | Version |
 |----------|-------------|---------|
-| [Jellyfin](https://mhzawadi.github.io/proxmox-lxc-templates/#jellyfin) | Media Server | 10.11.6 |
+| [Jellyfin](https://mhzawadi.github.io/proxmox-lxc-templates/#jellyfin) | Media Server | 12.0 |
 | [Nextcloud](https://mhzawadi.github.io/proxmox-lxc-templates/#nextcloud) | cloud storage | 34.0.3 |
-| [Nginx](https://mhzawadi.github.io/proxmox-lxc-templates/#nginx) | Web Server | 1.28.2 |
-| [Vaultwarden](https://mhzawadi.github.io/proxmox-lxc-templates/#vaultwarden) | Unofficial Bitwarden | 1.35.4 |
+| [Nginx](https://mhzawadi.github.io/proxmox-lxc-templates/#nginx) | Web Server | 1.30.4 |
+| [Vaultwarden](https://mhzawadi.github.io/proxmox-lxc-templates/#vaultwarden) | Unofficial Bitwarden | 1.37.2 |
 
 ## Installation
 
